@@ -17,7 +17,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="text-center">
+    <div className="text-center mx-2">
       <h1 className="font-bold text-6xl mt-14">Crypto Coins</h1>
       <SearchCoins getSearchResults={(results) => setCoins(results)} />
       <Coins coins={coins} />

@@ -20,7 +20,7 @@ export default function Coins({ coins }) {
 
     if (loading) {
         return (
-            <div className="grid grid-cols-4 gap-10">
+            <div className="grid grid-cols-4 mx-auto max-w-[1260px] gap-10 sm:grid-cols-2 sm:gap-4 sm:gap-y-8 md:grid-cols-4">
                 {[...Array(60)].map((item, i) => (
                     <div key={i} className="h-20 bg-black/30 animate-pulse rounded" />
                 ))}
@@ -30,7 +30,7 @@ export default function Coins({ coins }) {
 
     return (
         <>
-            <ul className="grid grid-cols-4 mx-auto max-w-[1260px] gap-10">
+            <ul className="grid grid-cols-4 mx-auto max-w-[1260px] gap-10 sm:grid-cols-2 sm:gap-4 sm:gap-y-8 md:grid-cols-4">
                 {coins.map(coin => (
                     <li key={coin.uuid} className="flex flex-col">
                         <Image
@@ -39,6 +39,7 @@ export default function Coins({ coins }) {
                             alt={coin.name}
                             width={70}
                             height={70}
+                            priority
                         />
                         <h3>{coin.name}</h3>
                         <p>{coin.symbol}</p>
